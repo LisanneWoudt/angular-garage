@@ -1,0 +1,11 @@
+<div>
+  <h2>Register a new car</h2>
+  <p>Brand:
+    <input [(ngModel)]="car.brand" #car="ngModel" required>
+  </p>
+  <p>Number plate:
+    <input [(ngModel)]="car.numberPlate" #car="ngModel" required>
+  </p>
+  <br><br>
+  <button (click)="addCar(car)">Send</button>
+</div>

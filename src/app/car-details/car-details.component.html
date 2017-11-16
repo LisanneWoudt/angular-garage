@@ -1,0 +1,13 @@
+<div *ngIf="car">
+<h2>{{ car.brand | uppercase }} details</h2>
+<div><span>id: </span>{{car.id}}</div>
+<div>
+  <label>number plate:
+      {{ car.numberPlate }}
+  </label>
+  <p>Status: <b>{{car.status ? car.status : 'waiting'}}</b></p>
+  <button *ngIf="car.status != 'done'" (click)="nextStatus(car.status)">proceed</button>
+</div>
+<br>
+<app-owner></app-owner>
+</div>
